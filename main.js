@@ -7,7 +7,7 @@ const CONFIG = {
   },
   onlineClubsUrl: "https://t.me/your_channel/online_clubs",
   // Замените YOUR_BOT_USERNAME на реальный ник вашего бота без @
-  botUsername: "YOUR_BOT_USERNAME",
+  botUsername: "KoshAlexBot",
 };
 
 const STORAGE_KEYS = {
@@ -98,7 +98,7 @@ function initContent() {
 
   if (btnOpenTelegram && CONFIG.botUsername) {
     btnOpenTelegram.addEventListener("click", () => {
-      const url = `https://t.me/${CONFIG.botUsername}?start=miniapp`;
+      const url = `https://t.me/${CONFIG.botUsername}?start=3465177`;
       window.open(url, "_blank");
     });
   }
@@ -108,4 +108,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initTelegramTheme();
   initContent();
 });
+
 
