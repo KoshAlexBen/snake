@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Змейка</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="game-wrapper">
+    <h1 class="title">Змейка</h1>
+    <canvas id="game" width="400" height="400"></canvas>
+    <div class="info">
+      <div class="score">Счёт: <span id="score">0</span></div>
+      <button id="restart">Заново</button>
+    </div>
+    <p class="help">
+      Управление: стрелки клавиатуры или W/A/S/D, либо кнопки ниже
+    </p>
+
+    <div class="touch-controls" aria-hidden="false">
+      <div class="touch-row">
+        <button class="touch-btn" id="btn-up">▲</button>
+      </div>
+      <div class="touch-row middle-row">
+        <button class="touch-btn" id="btn-left">◀</button>
+        <button class="touch-btn pause-btn" id="btn-pause">II</button>
+        <button class="touch-btn" id="btn-right">▶</button>
+      </div>
+      <div class="touch-row">
+        <button class="touch-btn" id="btn-down">▼</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
