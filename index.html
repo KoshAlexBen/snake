@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>БенБот — Игра</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  </head>
+  <body>
+    <div class="app">
+      <header class="app-header">
+        <div class="logo-wrapper">
+          <!-- Замените src на ваш реальный логотип -->
+          <div class="logo-placeholder">LOGO</div>
+        </div>
+        <h1 class="title">БенБот</h1>
+        <p class="subtitle" id="greeting">
+          Привет! Загружаю данные...
+        </p>
+      </header>
+
+      <main class="app-main">
+        <!-- Панель для авторизации / открытия в Telegram, показывается только вне Telegram -->
+        <section class="card" id="auth-card" style="display: none">
+          <h2 class="card-title">Авторизация через Telegram</h2>
+          <p class="card-text">
+            Чтобы мы могли узнать ваше имя и показать персональное приветствие,
+            откройте приложение через Telegram.
+          </p>
+          <button class="btn btn-primary" id="btn-open-telegram">
+            Открыть в Telegram
+          </button>
+        </section>
+
+        <section class="card">
+          <h2 class="card-title">Ближайшая живая игра</h2>
+          <p class="card-text" id="next-game-text">
+            15 марта, 19:00 — Квиз в баре «Пример» (ул. Примерная, 1)
+          </p>
+          <button class="btn btn-primary" id="btn-next-game">
+            Перейти к игре
+          </button>
+        </section>
+
+        <section class="card">
+          <h2 class="card-title">Онлайн‑клубы</h2>
+          <p class="card-text">
+            Выберите онлайн‑клуб, чтобы присоединиться к ближайшим играм.
+          </p>
+          <button class="btn btn-secondary" id="btn-online-clubs">
+            Открыть список клубов
+          </button>
+        </section>
+      </main>
+
+      <footer class="app-footer">
+        <small>© <span id="year"></span> БенБот. Все права защищены.</small>
+      </footer>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+  </html>
+
