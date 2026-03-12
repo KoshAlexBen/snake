@@ -20,6 +20,13 @@ let gameLoopId;
 let gameOver = false;
 let paused = false;
 
+// Инициализация Telegram WebApp (если запущены внутри Телеграма)
+if (window.Telegram && window.Telegram.WebApp) {
+  const tg = window.Telegram.WebApp;
+  tg.ready();
+  tg.expand();
+}
+
 function setupCanvasSize() {
   const viewportSize = Math.min(window.innerWidth, window.innerHeight);
   const maxSize = 420;
